@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Nav from './nav';
+import Sections1 from './input'
+import './grid.css';
+import Others from './other';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Nav />,
+  document.getElementById('root-nav')
 );
+ReactDOM.render(
+  <Sections1 />,
+  document.getElementById("news-of-the-day")
+);
+ReactDOM.render(
+  <Others />,
+  document.getElementById("others-acc")
+);
+// ReactDOM.render(
+//   <findingBox />,
+//   document.getElementById('root-header')
+// );
+// ReactDOM.render(
+//  <Sections1 />,
+//  document.getElementById('section-display-image')
+// );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
